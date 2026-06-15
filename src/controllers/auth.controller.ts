@@ -4,7 +4,7 @@ import { createUser, verifyUser } from '../services/user.service'
 import { createToken } from '../services/auth.service'
 import { verify } from 'node:crypto'
 
-export const signin: RequestHandler = (req, res) => {
+export const signin: RequestHandler = async (req, res) => {
     const schema = z.object({
         email: z.string().email(),
         password: z.string()

@@ -14,7 +14,7 @@ server.use(express.static('public'))
 
 server.use('/api/auth', authRoutes)
 server.use('/api/admin', adminRoutes)
-server.use('/api/main', mainRoutes)
+server.use('/api', mainRoutes)
 
 server.get('/api/teste', (req, res) => {
     res.json({ message: 'API funcionando!' })
